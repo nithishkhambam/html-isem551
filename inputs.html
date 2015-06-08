@@ -1,0 +1,119 @@
+<html>
+<title>Contact Us</title>
+<link rel="shortcut icon" href="C:/Users/nnithis/Desktop/Isem 551/logo.jpg" type="image/png">
+<head>
+ <script type="text/javascript" >
+
+    function submitform() {
+        var firstName = document.getElementById("firstName").value;
+        var lastName = document.getElementById("lastName").value;
+        var address = document.getElementById("inputAddress").value;
+        var zipCode = document.getElementById("inputZipcode").value;
+        var phone = document.getElementById("inputPhone").value;
+        var email = document.getElementById("inputEmail").value;
+        alert(firstName +' '+lastName+' your contact information is submitted');
+		
+		document.getElementById('personal_form').className='hideMe';
+    }
+    </script>
+	<style>
+	
+
+	.blue {
+    background-color: #b0c4de;
+	}
+	.red {
+    background-color: #cc0717;
+	}
+	
+	.white{
+	color: #ffffff;
+	}
+	.right {
+	padding-right: 2%;
+	}
+	
+	.span3 {
+	width: 21.700000%;
+	}
+	</style
+</head>
+<body>
+<br>
+<div class="red">
+	<table>
+		<tr>
+			<td>
+				<img src="logo.jpg" alt="Mountain View" style="width:60px;height:60px;">
+			</td>
+			<td><h1 class="white">My Life Insurance</h1></td>
+		</tr>
+	</table>
+</div>
+<h2> Contact us</h2>
+<p><b class="blue">Address</b> : 3333 beverly rd, Hoffman Estates, Il, 60173</P>
+<p><b class="blue">Phone Number</b> : 2147178925</P>
+<p><b class="blue">Email</b> : test@test.com</P>
+<p>Please provide your personal information. One of our agent will contact you very shortly</p>
+<br>
+    <h3>Personal Information </h3>
+    <form id="formInput" onSubmit="JavaScript:submitform()">
+        <table border="1" id='personal_form'>
+            <tr>
+                <td>
+                    <label for="inputFirstName"> First Name<span class="required">*</span></label>
+                </td>
+                <td>
+                    <input type="text" id="firstName" name="name" required autofocus>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="inputLastName"> Last Name<span class="required">*</span></label>
+                </td>
+                <td>
+                    <input type="text" id="lastName" name="name" required autofocus>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="inputAddress">Address</label>
+                </td>
+                <td>
+                    <input type="text" id="inputAddress" name="address">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="inputZipcode">Zip Code<span class="required">*</span></label>
+                </td>
+                <td>
+                    <input type="text" id="inputZipcode" maxlength= 5 name="zipcode" placeholder="enter a 5-digit code" required pattern="^\d{5}$" oninvalid="this.setCustomValidity('Enter a 5-digit zipcode')" oninput="setCustomValidity('')">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="inputPhone">Phone<span class="required">*</span></label>
+                </td>
+                <td>
+                    <input type="tel" id="inputPhone" maxlength= 10 name="phone" placeholder="phone Number" required pattern="^\d{10}$" oninvalid="this.setPhoneValidity('Enter a 10-digit phone numberr')" oninput="setPhoneValidity('')">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="inputEmail">Email<span class="required">*</span></label>
+                </td>
+                <td>
+                    <input type="email" id="inputEmail" name="email" required>
+                </td>
+            </tr>
+            <td>&nbsp;</td>
+            <td>
+                <input type="submit" value="SUBMIT" id="btnSubmit">
+    </form>
+    </tr>
+    </table>
+    </form>
+</body>
+
+</html>
